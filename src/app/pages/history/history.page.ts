@@ -1,4 +1,7 @@
+import { History } from './../../models/history';
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-history',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryPage implements OnInit {
 
-  constructor() { }
+  history: History[];
+
+  constructor(
+    private storageService: StorageService,
+    public loadingController: LoadingController
+  ) { }
 
   ngOnInit() {
   }
+
+  clearHistory() {}
+
+  deleteScan(history: History) {}
 
 }

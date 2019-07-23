@@ -1,5 +1,7 @@
 {
   "name": "simple-barcode",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

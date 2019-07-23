@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>history</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>History</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p style="line-height: 1px">Scans</p>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="small" color="danger" (click)="clearHistory()">CLEAR</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div *ngFor="let h of history">
+    <ion-card>
+      <ion-item>
+        <ion-label>
+          <small>{{h.date_scanned}}</small>
+        </ion-label>
+        <ion-button size="small" color="danger" slot="end" (click)="deleteScan(h)">DELETE</ion-button>
+      </ion-item>
+      <ion-card-content>
+        <small>Format : </small>{{h.format}}
+        <br>
+        <small>Content : </small>{{h.text}}
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
