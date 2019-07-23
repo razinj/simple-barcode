@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">
+        Simple Scanner
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="logo ion-text-center">
+            <img src="assets/logo.png" height="60" width="60" />
+            <br>
+            <h3>Simple Scanner</h3>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="buttons">
+          <ion-button expand="block" shape="round" color="primary" (click)="scanBarcode()">SCAN</ion-button>
+          <ion-button class="historyBtn" expand="block" shape="round" fill="outline" [routerLink]="['/tabs/history']">HISTORY</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

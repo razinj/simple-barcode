@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private storageService: StorageService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public scanBarcode() {
+    this.storageService.scanBarcode();
   }
 
 }

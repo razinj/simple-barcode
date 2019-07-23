@@ -17,10 +17,23 @@ export class HistoryPage implements OnInit {
     public loadingController: LoadingController
   ) { }
 
-  ngOnInit() {}
+  async ngOnInit() {
+    // this.getsavedHistory();
+    this.history = await this.storageService.getHistory();
+  }
 
-  clearHistory() {}
+  // async getsavedHistory() {
+  //   this.history = await this.storageService.getHistory();
+  // }
 
-  deleteScan(history: History) {}
+  clearHistory() {
+    this.storageService.clearHistory();
+    this.history = [];
+  }
+
+  deleteScan(history: History) {
+    this.history.splice(this.history.indexOf(history), 1);
+    this.storageService.setHistory(this.history);
+  }
 
 }
