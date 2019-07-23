@@ -17,8 +17,7 @@ export class HistoryPage implements OnInit {
     public loadingController: LoadingController
   ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   clearHistory() {}
 
