@@ -36,7 +36,7 @@ export class StorageService {
         };
         history.push(scanData);
         this.setHistory(history);
-        this.navCtrl.navigateRoot('tabs/history');
+        this.navCtrl.navigateForward('tabs/history');
       }
     } catch (error) {
       this.showToast();
@@ -54,8 +54,9 @@ export class StorageService {
 
   async getHistory() {
     try {
-      let history = await this.nativeStorage.getItem(environment.storage_name);
-      history = history ? history : [];
+      // let history = await this.nativeStorage.getItem(environment.storage_name);
+      // history = history ? history : [];
+      const history = [{text: 'Content Here', format: 'QR_CODE', date_scanned: `${Date.now()}`}] ;
       return history;
     } catch (error) {
       console.log('Error getting history!', error);

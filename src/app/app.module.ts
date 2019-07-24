@@ -16,7 +16,10 @@ import { NavController } from '@ionic/angular';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -27,4 +30,4 @@ import { NavController } from '@ionic/angular';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

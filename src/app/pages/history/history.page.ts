@@ -1,7 +1,8 @@
 import { History } from './../../models/history';
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storage.service';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ActionSheetController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-history',
@@ -14,26 +15,27 @@ export class HistoryPage implements OnInit {
 
   constructor(
     private storageService: StorageService,
-    public loadingController: LoadingController
+    public loadingController: LoadingController,
+    public actionSheetController: ActionSheetController,
+    private iab: InAppBrowser
   ) { }
 
   async ngOnInit() {
-    // this.getsavedHistory();
     this.history = await this.storageService.getHistory();
   }
 
-  // async getsavedHistory() {
-  //   this.history = await this.storageService.getHistory();
-  // }
-
   clearHistory() {
-    this.storageService.clearHistory();
     this.history = [];
+    this.storageService.clearHistory();
   }
 
   deleteScan(history: History) {
     this.history.splice(this.history.indexOf(history), 1);
     this.storageService.setHistory(this.history);
+  }
+
+  searchScan (history: History) {
+    this.iab.create(`https://www.google.com/search?q=${history.text}`, '_system');
   }
 
 }

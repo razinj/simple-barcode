@@ -6,15 +6,13 @@ import { StorageService } from 'src/app/services/storage.service';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
   constructor(
     private storageService: StorageService
   ) { }
 
-  ngOnInit() {}
-
-  public scanBarcode() {
+  scanBarcode() {
     this.storageService.scanBarcode();
   }
 
