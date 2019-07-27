@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { ToastController, NavController } from '@ionic/angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { History } from '../models/history';
 import { environment } from 'src/environments/environment';
 import { formatDate } from '@angular/common';
+import { Storage } from '@ionic/storage';
 
 const options: any = {
   showTorchButton: true,
@@ -18,7 +18,7 @@ const options: any = {
 export class StorageService {
 
   constructor(
-    private nativeStorage: NativeStorage,
+    private storage: Storage,
     private barcodeScanner: BarcodeScanner,
     private toastController: ToastController,
     private navCtrl: NavController
@@ -54,9 +54,8 @@ export class StorageService {
 
   async getHistory() {
     try {
-      // let history = await this.nativeStorage.getItem(environment.storage_name);
-      // history = history ? history : [];
-      const history = [{text: 'Content Here', format: 'QR_CODE', date_scanned: `${Date.now()}`}] ;
+      let history: History[] = await this.storage.get(environment.storage_name);
+      history = history ? history : [];
       return history;
     } catch (error) {
       console.log('Error getting history!', error);
@@ -64,11 +63,11 @@ export class StorageService {
   }
 
   setHistory(history: History[]) {
-    this.nativeStorage.setItem(environment.storage_name, history);
+    this.storage.set(environment.storage_name, history);
   }
 
   clearHistory() {
-    this.nativeStorage.remove(environment.storage_name);
+    this.storage.remove(environment.storage_name);
   }
 
 }

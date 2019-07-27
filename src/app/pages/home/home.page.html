@@ -14,7 +14,7 @@
     <ion-row>
       <ion-col>
         <div class="logo ion-text-center">
-          <img src="assets/logo.png" height="60" width="60" />
+          <img src="assets/logo.png" height="60" width="60" alt="LOGO" />
           <br>
           <h3>Simple Barcode</h3>
         </div>
@@ -22,7 +22,7 @@
     </ion-row>
     <ion-row>
       <ion-col class="buttons">
-        <ion-button expand="block" shape="round" color="primary" (click)="scanBarcode()">scan</ion-button>
+        <ion-button expand="block" shape="round" (click)="scanBarcode()">scan</ion-button>
         <ion-button class="historyBtn" expand="block" shape="round" fill="outline" [routerLink]="['/tabs/history']">history</ion-button>
       </ion-col>
     </ion-row>

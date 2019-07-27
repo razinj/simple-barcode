@@ -19,12 +19,12 @@ export class AppComponent {
     {
       title: 'History',
       url: '/tabs/history',
-      icon: 'book'
+      icon: 'qr-scanner'
     },
     {
       title: 'About',
       url: '/tabs/about',
-      icon: 'document'
+      icon: 'information-circle-outline'
     }
   ];
 
