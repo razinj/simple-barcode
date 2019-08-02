@@ -27,7 +27,9 @@ export class StorageService {
   async scanBarcode() {
     try {
       const result = await this.barcodeScanner.scan(options);
-      if (!result.cancelled) {
+      if (result.cancelled) {
+        this.navCtrl.navigateForward('tabs/home');
+      } else {
         const history: History[] = await this.getHistory();
         const scanData: History = {
           text: result.text,
