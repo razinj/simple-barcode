@@ -1,17 +1,19 @@
-# simple-barcode
+# Simple Barcode - Scanner
 
-[Simple Barcode - Scanner](https://play.google.com/store/apps/details?id=razinj.simple.barcode)
+![App's Icon](src/assets/resized-icon.png "Simple Barcode - Scanner")
+
+## [Simple Barcode - Scanner](https://play.google.com/store/apps/details?id=razinj.simple.barcode "Google Play Store Link")
 
 Simple Barcode is an open-source, fast, lightweight barcode scanner app.
 
-***
+---
 
 Whats's inside :
 
 * Ionic 4
 * Angular 7.3.9
 
-***
+---
 
 Installation :
 
