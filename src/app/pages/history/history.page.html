@@ -18,24 +18,30 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <div *ngFor="let h of history">
-    <ion-card>
-      <ion-item>
-        <ion-label>
-          <small>{{h.date_scanned}}</small>
-        </ion-label>
-        <ion-button size="small" slot="end" (click)="deleteScan(h)">
-          <ion-icon name="trash"></ion-icon>
-        </ion-button>
-        <ion-button size="small" slot="end" (click)="searchScan(h)" color="medium">
-          <ion-icon name="search"></ion-icon>
-        </ion-button>
-      </ion-item>
-      <ion-card-content>
-        <small>Format : </small>{{h.format}}
-        <br>
-        <small>Content : </small>{{h.text}}
-      </ion-card-content>
-    </ion-card>
+  <div *ngIf="history">
+    <div *ngFor="let h of history">
+      <ion-card>
+        <ion-item>
+          <ion-label>
+            <small>{{h.date_scanned}}</small>
+          </ion-label>
+          <ion-button size="small" slot="end" (click)="deleteScan(h)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+          <ion-button size="small" slot="end" (click)="searchScan(h)" color="medium">
+            <ion-icon name="search"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-card-content>
+          <small>Format : </small>{{h.format}}
+          <br>
+          <small>Content : </small>{{h.text}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <div class="noHistoryMessage" *ngIf="!history">
+    <p>No History Here Yet</p>
+    <p>Go ahead scan something make me disappear!</p>
   </div>
 </ion-content>

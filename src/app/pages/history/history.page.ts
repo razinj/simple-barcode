@@ -30,7 +30,7 @@ export class HistoryPage implements OnInit {
   }
 
   clearHistory() {
-    this.history = [];
+    this.history = null;
     this.storageService.clearHistory();
   }
 

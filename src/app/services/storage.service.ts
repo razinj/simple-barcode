@@ -30,7 +30,8 @@ export class StorageService {
       if (result.cancelled) {
         this.navCtrl.navigateForward('tabs/home');
       } else {
-        const history: History[] = await this.getHistory();
+        let history: History[] = await this.getHistory();
+        history = history != null ? history : [];
         const scanData: History = {
           text: result.text,
           format: result.format,
@@ -57,7 +58,7 @@ export class StorageService {
   async getHistory() {
     try {
       let history: History[] = await this.storage.get(environment.storage_name);
-      history = history ? history : [];
+      history = history ? history : null;
       return history;
     } catch (error) {
       console.log('Error getting history!', error);
