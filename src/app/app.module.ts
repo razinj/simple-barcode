@@ -8,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { NavController } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage';

@@ -7,6 +7,7 @@ import { formatDate } from '@angular/common';
 import { Storage } from '@ionic/storage';
 
 const options: any = {
+  prompt: '',
   showTorchButton: true,
   disableAnimations: false,
   disableSuccessBeep: false

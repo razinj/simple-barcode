@@ -1,5 +1,5 @@
 import { History } from './../../models/history';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { StorageService } from 'src/app/services/storage.service';
 import { LoadingController } from '@ionic/angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
@@ -9,7 +9,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
   templateUrl: './history.page.html',
   styleUrls: ['./history.page.scss'],
 })
-export class HistoryPage implements OnInit {
+export class HistoryPage {
 
   history: History[];
 
@@ -18,8 +18,6 @@ export class HistoryPage implements OnInit {
     public loadingController: LoadingController,
     private iab: InAppBrowser
   ) { }
-
-  ngOnInit() { }
 
   ionViewWillEnter() {
     this.getHistory();
