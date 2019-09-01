@@ -43,6 +43,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'generate',
+        children: [
+          {
+            path: '',
+            loadChildren: '../pages/generate-qr-code/generate-qr-code.module#GenerateQrCodeModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
