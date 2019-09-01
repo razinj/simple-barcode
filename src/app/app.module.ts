@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { NavController } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    Base64ToGallery,
     NavController,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
