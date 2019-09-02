@@ -47,7 +47,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../pages/generate-qr-code/generate-qr-code.module#GenerateQrCodeModule'
+            loadChildren: '../pages/generate-qr-code/generate-qr-code.module#GenerateQrCodePageModule'
           }
         ]
       },

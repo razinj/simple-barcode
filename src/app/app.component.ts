@@ -21,6 +21,11 @@ export class AppComponent {
       icon: 'qr-scanner'
     },
     {
+      title: 'Generate QR Code',
+      url: '/tabs/generate',
+      icon: 'barcode'
+    },
+    {
       title: 'About',
       url: '/tabs/about',
       icon: 'information-circle-outline'
