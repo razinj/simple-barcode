@@ -3,5 +3,15 @@
   "integrations": {
     "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "preferences":{
+    "android":[{
+        "name": "android-minSdkVersion",
+        "value": "19"
+    },
+    {
+        "name":"android-targetSdkVersion",
+        "value":"28"
+    }]
+}
 }
