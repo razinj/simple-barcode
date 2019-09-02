@@ -19,7 +19,7 @@
     </ion-row>
   </ion-grid>
   <div *ngIf="history">
-    <div *ngFor="let h of history">
+    <div *ngFor="let h of getSortedHistory">
       <ion-card>
         <ion-item>
           <ion-label>

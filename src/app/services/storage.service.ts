@@ -36,7 +36,7 @@ export class StorageService {
         const scanData: History = {
           text: result.text,
           format: result.format,
-          date_scanned: formatDate(new Date(), 'dd-MM-yyyy - hh:mm', 'en')
+          date_scanned: formatDate(new Date(), 'short', 'en')
         };
         history.push(scanData);
         this.setHistory(history);

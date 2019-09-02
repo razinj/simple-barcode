@@ -27,6 +27,12 @@ export class HistoryPage {
     this.history = await this.storageService.getHistory();
   }
 
+  get getSortedHistory() {
+    return this.history.sort((historyA, historyB) => {
+      return (new Date(historyB.date_scanned) as any) - (new Date(historyA.date_scanned) as any);
+    });
+  }
+
   clearHistory() {
     this.history = null;
     this.storageService.clearHistory();
