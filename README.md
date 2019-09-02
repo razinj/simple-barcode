@@ -1,8 +1,8 @@
-![App's Icon](src/assets/resized-icon.png "Simple Barcode - Scanner")
+![App's Icon](src/assets/resized-icon.png "Simple Barcode - Scanner & Generator")
 
 # [Simple Barcode - Scanner](https://play.google.com/store/apps/details?id=razinj.simple.barcode "Google Play Store Link")
 
-Simple Barcode is an open-source, fast, lightweight barcode scanner app.
+Simple Barcode is an open-source, fast, lightweight barcode scanner and generator app.
 
 ---
 
@@ -22,12 +22,12 @@ Installation :
 * Open the project in your favourite text editor.
 * Install dependencies :
 
-`npm i`
+`npm install`
 
-* Install Ionic :
+* Install Ionic (globally) :
 
-`npm i -g ionic`
+`npm install -g ionic`
 
 * Start the server :
 
-`ionic serve -l`
+`ionic serve -l --devapp`
