@@ -19,7 +19,7 @@ Installation :
 
 `git clone https://github.com/razinj/simple-barcode.git`
 
-* Open the project in your favourite text editor.
+* Open the project in your favourite text editor/Terminal.
 * Install dependencies :
 
 `npm install`
