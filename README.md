@@ -4,6 +4,8 @@
 
 Simple Barcode is an open-source, fast, lightweight barcode scanner and generator app.
 
+## NOTE: This project is no longer maintained, Use at your own risk/maintenance.
+
 ---
 
 Whats's inside :
