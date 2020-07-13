@@ -4,7 +4,7 @@
 
 Simple Barcode is an open-source, fast, lightweight barcode scanner and generator app.
 
-## NOTE: This project is no longer maintained, Use at your own risk/maintenance.
+## NOTE: This project is no longer maintained.
 
 ---
 
@@ -21,7 +21,7 @@ Installation :
 
 `git clone https://github.com/razinj/simple-barcode.git`
 
-* Open the project in your favourite text editor/Terminal.
+* Open the project in your favourite text editor.
 * Install dependencies :
 
 `npm install`
